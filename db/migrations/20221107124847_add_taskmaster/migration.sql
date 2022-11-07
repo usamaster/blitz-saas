@@ -1,0 +1,8 @@
+-- CreateTable
+CREATE TABLE "Taskmaster" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
+    "label" TEXT NOT NULL,
+    "completed" BOOLEAN NOT NULL
+);

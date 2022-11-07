@@ -1,0 +1,38 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  margin: 0px;
+  background-color: #272e4a;
+  color: white;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.navBar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.links a {
+  margin-left: 50px;
+  color: #121624;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
