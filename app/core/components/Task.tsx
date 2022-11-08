@@ -3,7 +3,7 @@ import Image from "next/image"
 import React from "react"
 
 export const containerStyle =
-  "h-12 mb-5 flex items-center rounded-full bg-gray-700 shadow-md px-4 focus:ring outline-none"
+  "h-12 mb-5 flex items-center rounded-full bg-gray-700 shadow-md px-4 focus:ring outline-none justify-items-end"
 export const textStyle = "relative text-md color-gray-50"
 
 type TaskType = {

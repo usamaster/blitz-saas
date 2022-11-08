@@ -64,6 +64,6 @@ const Tasks: BlitzPage = () => {
   )
 }
 
-Tasks.getLayout = (page) => <Layout title="Taskhero">{page}</Layout>
+Tasks.getLayout = (page) => <Layout title="Taskmaster">{page}</Layout>
 
 export default Tasks

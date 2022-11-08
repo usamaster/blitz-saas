@@ -18,52 +18,50 @@ const UserInfo = () => {
 
   if (currentUser) {
     return (
-      <>
-        <button
-          className="button small"
-          onClick={async () => {
-            await logoutMutation()
-          }}
-        >
-          Logout
-        </button>
+      <Layout title="Home">
         <div>
-          User id: <code>{currentUser.id}</code>
-          <br />
-          User role: <code>{currentUser.role}</code>
+          <h1>Hello, world!</h1>
+          <Suspense fallback="Loading...">
+            <button
+              className="button small"
+              onClick={async () => {
+                await logoutMutation()
+              }}
+            >
+              Logout
+            </button>
+            <div>
+              User id: <code>{currentUser.id}</code>
+              <br />
+              User role: <code>{currentUser.role}</code>
+            </div>
+          </Suspense>
         </div>
-      </>
+      </Layout>
     )
   } else {
     return (
-      <>
-        <Link href={Routes.SignupPage()}>
-          <a className="button small">
-            <strong>Sign Up</strong>
-          </a>
-        </Link>
-        <Link href={Routes.LoginPage()}>
-          <a className="button small">
-            <strong>Login</strong>
-          </a>
-        </Link>
-      </>
+      <div className="main-content">
+        <h1>Hello, world!</h1>
+        <Suspense fallback="Loading...">
+          <Link href={Routes.SignupPage()}>
+            <a className="button small">
+              <strong>Sign Up</strong>
+            </a>
+          </Link>
+          <Link href={Routes.LoginPage()}>
+            <a className="button small">
+              <strong>Login</strong>
+            </a>
+          </Link>
+        </Suspense>
+      </div>
     )
   }
 }
 
 const Home: BlitzPage = () => {
-  return (
-    <Layout title="Home">
-      <div>
-        <h1>Hello, world!</h1>
-
-        <Suspense fallback="Loading...">
-          <UserInfo />
-        </Suspense>
-      </div>
-    </Layout>
-  )
+  return <UserInfo />
 }
 
 export default Home
